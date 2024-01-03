@@ -1,0 +1,33 @@
+<h1>{{ name }}</h1>
+
+<dl>
+  <td>Nombre:</td>
+  <dd>  {{ name }}  </dd>
+
+  <td>Edad:</td>
+  <dd>  {{ age }}  </dd>
+
+  <td>Metodo:</td>
+  <dd>  {{ getHeroDiscription() }} </dd>
+
+  <td>Capitalizado:</td>
+  <dd>  {{ capitalizedName }}  </dd>
+</dl>
+
+<!-- Practicando el IF -->
+<button
+  *ngIf="name != 'Marcelo'"
+  (click)="changeName('Marcelo')">
+  Cambiar nombre
+</button>
+
+<button
+  *ngIf="age != 24"
+  (click)="changeAge(24)">
+  Cambiar edad
+</button>
+
+<button (click)="reset()">
+  Reset
+</button>
+
