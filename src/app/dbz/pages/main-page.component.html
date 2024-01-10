@@ -3,11 +3,11 @@
 <div class="row">
 
   <div class="col">
-    <app-dbz-list [characterlist]="character"></app-dbz-list> <!-- Le pasamos informacion al hijo -->
+    <app-dbz-list (onDeleteCharacter)="deleteCharacter($event)" [characterlist]="characters"></app-dbz-list> <!-- Le pasamos informacion al hijo, y escuchamos el evento que nos manda el hijo.-->
   </div>
 
   <div class="col">
-    <app-dbz-addcharacter></app-dbz-addcharacter>
+    <app-dbz-addcharacter (onNewCharacter)="addNewCharacter($event)" ></app-dbz-addcharacter> <!-- $event es la variable que recive del hijo-->
   </div>
 
 </div>
